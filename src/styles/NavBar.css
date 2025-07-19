@@ -3,10 +3,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: var(--general-bg);
-  color: var(--general-accent);
+  background: var(--nav-bg);
+  color: var(--nav-accent);
   font-weight: bold;
-  border-radius: var(--border-radius);
+
 }
 .navbar-title {
   font-size: 1.3rem;

@@ -1,10 +1,11 @@
 :root {
-  --general-bg: #e3f2fd;
+  --general-bg: #c8d7dc;
   --general-accent: #1976d2;
   --edit-bg: #fce4ec;
   --edit-accent: #d81b60;
-  --nav-bg: #e8f5e9;
-  --nav-accent: #388e3c;
+  --nav-bg: #081b26;
+  --nav-text: #586166;
+  --nav-accent: #f2766b;
   --text-main: #222;
   --border-radius: 12px;
 }
