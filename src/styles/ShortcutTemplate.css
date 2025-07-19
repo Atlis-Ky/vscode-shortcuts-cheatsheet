@@ -1,0 +1,30 @@
+.shortcut-template {
+  border-radius: var(--border-radius);
+  margin: 1rem 0;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+.shortcut-title {
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+.shortcut-keys {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.keybind {
+  background: #fff;
+  border-radius: 6px;
+  padding: 0.3rem 0.7rem;
+  margin-top: 0.2rem;
+  font-family: monospace;
+  font-size: 1rem;
+  border: 1px solid #eee;
+}
+@media (max-width: 600px) {
+  .shortcut-keys {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
