@@ -1,11 +1,31 @@
 :root {
-  --general-bg: #c8d7dc;
-  --general-accent: #1976d2;
-  --edit-bg: #fce4ec;
-  --edit-accent: #d81b60;
-  --nav-bg: #081b26;
-  --nav-text: #586166;
-  --nav-accent: #f2766b;
-  --text-main: #222;
-  --border-radius: 12px;
+
+/* GROUPS */
+
+    /* General */
+    --general-bg: #c8d7dc;
+    --general-accent: #1976d2;
+    /* Basic Editing */
+    --edit-bg: #fce4ec;
+    --edit-accent: #d81b60;
+    /* Intergrated Terminal */
+
+    /* File Management */
+
+    /* Search and Replace */
+
+
+/* PAGE STYLING */
+
+    /* Navbar */
+    --nav-bg: #081b26;
+    --nav-text: #586166;
+    --nav-accent: #f2766b;
+    --text-main: #222;
+    --border-radius: 12px;
+
+    /* ContextCard */
+    --contextcard-primary: #081b26;
+    --contextcard-secondary: #586166;
+    --contextcard-accent: #f2766b;
 }

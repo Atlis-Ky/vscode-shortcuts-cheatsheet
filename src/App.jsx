@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar";
 import ShortcutList from "./components/ShortcutList";
 import shortcutData from "./components/ShortcutData";
 import "./styles/Palettes.css";
+import ContextCard from "./components/ContextCard";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
       <NavBar onSearch={setSearch} />
+      <ContextCard />
       <ShortcutList shortcuts={filteredShortcuts} />
     </>
   );
