@@ -7,6 +7,7 @@
 .shortcut-title {
   margin-bottom: 0.5rem;
   color: var(--text-main);
+  text-align: center;
 }
 .shortcut-keys {
   display: flex;
@@ -22,6 +23,10 @@
   font-size: 1rem;
   border: 1px solid #eee;
 }
+.windows-subheading {
+  text-align: right;
+}
+
 @media (max-width: 600px) {
   .shortcut-keys {
     flex-direction: column;

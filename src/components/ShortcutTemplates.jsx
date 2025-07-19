@@ -15,11 +15,11 @@ const ShortcutTemplates = ({ shortcut }) => (
     <h3 className="shortcut-title">{shortcut.shortcut}</h3>
     <div className="shortcut-keys">
       <div>
-        <h4>Mac</h4>
+        <h4 className="mac-subheading">Mac</h4>
         <div className="keybind">{shortcut.mac}</div>
       </div>
       <div>
-        <h4>Windows</h4>
+        <h4 className="windows-subheading">Windows</h4>
         <div className="keybind">{shortcut.windows}</div>
       </div>
     </div>
