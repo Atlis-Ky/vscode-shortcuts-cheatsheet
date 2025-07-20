@@ -1,11 +1,11 @@
 .context-card {
   background: var(--contextcard-primary);
   color: var(--contextcard-secondary);
-  border-left: 8px solid var(--contextcard-accent);
+  border-top: 3px solid var(--contextcard-accent);
   margin: 0rem 0;
   width: 100vw;
   max-width: 100vw;
-  padding: 3rem 1.5rem;
+  padding: 2rem 1.5rem;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
   text-align: center;
   box-sizing: border-box;
@@ -13,7 +13,7 @@
 }
 
 .context-card-heading {
-  font-family: "Montserrat", "Arial Black", Arial, sans-serif;
+  font-family: 'Special Gothic Expanded One', Arial, sans-serif;
   font-size: 3rem;
   font-weight: 900;
   letter-spacing: 0.05em;
