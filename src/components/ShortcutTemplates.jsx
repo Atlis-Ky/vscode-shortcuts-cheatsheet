@@ -1,40 +1,40 @@
 import React, { useRef, useEffect, useState } from "react";
 import "../styles/ShortcutTemplate.css";
 
-// Group-based color mapping
+// Group-based color mapping - all using main color palette
 const groupStyles = {
   General: {
-    headerBg: "var(--general-accent)",
-    cardBg: "var(--general-bg)",
-    accentColor: "var(--general-accent)",
+    headerBg: "var(--main-secondary)",
+    cardBg: "var(--main-dark)",
+    accentColor: "var(--main-accent)",
   },
   "Basic Editing": {
-    headerBg: "var(--edit-accent)",
-    cardBg: "var(--edit-bg)",
-    accentColor: "var(--edit-accent)",
+    headerBg: "var(--main-accent)",
+    cardBg: "var(--main-dark)",
+    accentColor: "var(--main-accent)",
   },
   "File Management": {
-    headerBg: "var(--wine-secondary)",
-    cardBg: "var(--wine-primary)",
-    accentColor: "var(--wine-accent)",
+    headerBg: "var(--main-accent)",
+    cardBg: "var(--main-dark)",
+    accentColor: "var(--main-accent)",
   },
   "Search and Replace": {
-    headerBg: "var(--coral-secondary)",
-    cardBg: "var(--coral-primary)",
-    accentColor: "var(--coral-accent)",
+    headerBg: "var(--main-accent)",
+    cardBg: "var(--main-dark)",
+    accentColor: "var(--main-accent)",
   },
   "Integrated Terminal": {
-    headerBg: "var(--aqua-secondary)",
-    cardBg: "var(--aqua-primary)",
-    accentColor: "var(--aqua-accent)",
+    headerBg: "var(--main-accent)",
+    cardBg: "var(--main-dark)",
+    accentColor: "var(--main-accent)",
   },
 };
 
 // Default styles for groups without specific mapping
 const defaultStyle = {
-  headerBg: "var(--nav-accent)",
-  cardBg: "var(--nav-bg)",
-  accentColor: "var(--nav-text)",
+  headerBg: "var(--main-accent)",
+  cardBg: "var(--main-dark)",
+  accentColor: "var(--main-accent)",
 };
 
 const ShortcutTemplates = ({ shortcut }) => {

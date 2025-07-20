@@ -1,21 +1,17 @@
 :root {
 
-/* GROUPS */
+/* PALETTE - MAIN */
 
-    /* General */
-    --general-bg: #c8d7dc;
-    --general-accent: #1976d2;
-    /* Basic Editing */
-    --edit-bg: #fce4ec;
-    --edit-accent: #d81b60;
-    /* Intergrated Terminal */
-
-    /* File Management */
-
-    /* Search and Replace */
+--main-accent: #f2766b;
+--main-secondary: #586166;
+--main-tertiary: #ecc5c1;
+--main-dark: #081b26;
+--main-text-dark: #222;
+--main-text-light: #f7f7f7;
 
 
-/* PAGE STYLING */
+
+/* OLD PAGE STYLING */
 
     /* Navbar */
     --nav-bg: #081b26;

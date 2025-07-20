@@ -15,32 +15,39 @@ const ShortcutList = ({ shortcuts }) => {
   // Get the groups in the order they appear in the original data
   const groups = Object.keys(groupedShortcuts);
 
-  // Map styles to use for each group heading
-  const groupStyles = {
-    General: { color: "var(--general-accent)" },
-    "Basic Editing": { color: "var(--edit-accent)" },
-    "File Management": { color: "var(--wine-secondary)" },
-    "Search and Replace": { color: "var(--coral-secondary)" },
-    "Integrated Terminal": { color: "var(--aqua-secondary)" },
+  // Map for group header colors
+  const groupHeaderColors = {
+    General: "var(--main-accent)",
+    "File Management": "var(--main-accent)",
+    "Integrated Terminal": "var(--main-accent)",
+    "Basic Editing": "var(--main-tertiary)",
+    "Search and Replace": "var(--main-tertiary)",
   };
 
   return (
     <div className="shortcut-list-container">
-      {groups.map((group) => (
-        <div key={group} className="shortcut-group">
-          <h2
-            className="group-heading"
-            style={groupStyles[group] || { color: "var(--nav-accent)" }}
-          >
-            {group}
-          </h2>
-          <div className="shortcut-list">
-            {groupedShortcuts[group].map((shortcut) => (
-              <ShortcutTemplates key={shortcut.id} shortcut={shortcut} />
-            ))}
+      {groups.map((group) => {
+        const headerColor = groupHeaderColors[group] || "var(--main-accent)";
+
+        return (
+          <div key={group} className="shortcut-group">
+            <h2
+              className="group-heading"
+              style={{
+                color: headerColor,
+                "--underline-color": headerColor, // CSS variable for the underline
+              }}
+            >
+              {group}
+            </h2>
+            <div className="shortcut-list">
+              {groupedShortcuts[group].map((shortcut) => (
+                <ShortcutTemplates key={shortcut.id} shortcut={shortcut} />
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 };

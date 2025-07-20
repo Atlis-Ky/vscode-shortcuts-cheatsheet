@@ -25,7 +25,10 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background-color: currentColor;
+  background-color: var(
+    --underline-color,
+    currentColor
+  ); /* Use the custom property with fallback */
 }
 
 .shortcut-list {

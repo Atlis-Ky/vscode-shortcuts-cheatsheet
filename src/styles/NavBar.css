@@ -2,12 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2rem; 
-  background: var(--nav-bg);
-  color: var(--nav-accent);
-  font-family: 'Special Gothic Expanded One', Arial, sans-serif;
+  padding: 1.5rem 2rem;
+  background: var(--main-dark);
+  color: var(--main-accent);
+  font-family: "Special Gothic Expanded One", Arial, sans-serif;
   font-weight: bold;
-
 }
 
 .navbar-title {
@@ -21,4 +20,3 @@
     padding: 1.2rem; /* Increased top and bottom padding for mobile */
   }
 }
-
