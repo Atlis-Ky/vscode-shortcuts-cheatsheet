@@ -4,29 +4,34 @@ import "../styles/ShortcutTemplate.css";
 // Group-based color mapping - all using main color palette
 const groupStyles = {
   General: {
-    headerBg: "var(--main-accent)",
+    headerBg: "var(--alt-one)",
     cardBg: "var(--main-dark)",
     accentColor: "var(--main-accent)",
+    titleColor: "var(--main-text-light)", // Default light text
   },
   "Basic Editing": {
     headerBg: "var(--main-accent)",
     cardBg: "var(--main-dark)",
     accentColor: "var(--main-accent)",
+    titleColor: "var(--main-text-light)", // Default light text
   },
   "File Management": {
-    headerBg: "var(--main-accent)",
+    headerBg: "var(--alt-three)",
     cardBg: "var(--main-dark)",
     accentColor: "var(--main-accent)",
+    titleColor: "var(--main-text-dark)", // Default dark text
   },
   "Search and Replace": {
-    headerBg: "var(--main-accent)",
+    headerBg: "var(--alt-four)",
     cardBg: "var(--main-dark)",
     accentColor: "var(--main-accent)",
+    titleColor: "var(--main-text-dark)", // Dark text for this group
   },
   "Integrated Terminal": {
-    headerBg: "var(--main-accent)",
+    headerBg: "var(--alt-five)",
     cardBg: "var(--main-dark)",
     accentColor: "var(--main-accent)",
+    titleColor: "var(--main-text-dark)", // Dark text for this group
   },
 };
 
@@ -35,6 +40,7 @@ const defaultStyle = {
   headerBg: "var(--main-accent)",
   cardBg: "var(--main-dark)",
   accentColor: "var(--main-accent)",
+  titleColor: "var(--main-text-light)",
 };
 
 const ShortcutTemplates = ({ shortcut }) => {
@@ -69,7 +75,12 @@ const ShortcutTemplates = ({ shortcut }) => {
         className="shortcut-header"
         style={{ backgroundColor: style.headerBg }}
       >
-        <h3 className="shortcut-title">{shortcut.shortcut}</h3>
+        <h3
+          className="shortcut-title"
+          style={{ color: style.titleColor }} // Apply the titleColor here
+        >
+          {shortcut.shortcut}
+        </h3>
       </div>
       <div className="shortcut-body" style={{ backgroundColor: style.cardBg }}>
         <div
