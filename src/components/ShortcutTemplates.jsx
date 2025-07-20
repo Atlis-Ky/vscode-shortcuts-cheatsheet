@@ -4,7 +4,7 @@ import "../styles/ShortcutTemplate.css";
 // Group-based color mapping - all using main color palette
 const groupStyles = {
   General: {
-    headerBg: "var(--main-secondary)",
+    headerBg: "var(--main-accent)",
     cardBg: "var(--main-dark)",
     accentColor: "var(--main-accent)",
   },

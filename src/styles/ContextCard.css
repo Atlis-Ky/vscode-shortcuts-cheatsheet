@@ -17,17 +17,21 @@
   font-size: 3rem;
   font-weight: 900;
   letter-spacing: 0.05em;
-  margin-bottom: 1rem;
-  color: var(--main-accent);
+  margin-bottom: 1rem; 
+  color: var(--main-text-light); 
   text-shadow: 2px 2px 0 var(--main-secondary);
   text-transform: uppercase;
 }
 
 .context-card-text {
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   font-weight: 500;
   color: var(--main-text-light);
   margin: 0;
+}
+
+.highlight-word {
+  color: var(--main-accent); 
 }
 
 @media (max-width: 600px) {

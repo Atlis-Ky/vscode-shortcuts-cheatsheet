@@ -18,23 +18,23 @@ const ShortcutList = ({ shortcuts }) => {
   // Map for group header colors and alignment
   const groupHeaderStyles = {
     General: {
-      color: "var(--main-accent)",
+      color: "var(--main-text-light)",
       align: "left",
     },
     "File Management": {
-      color: "var(--main-accent)",
+      color: "var(--main-text-light)",
       align: "left",
     },
     "Integrated Terminal": {
-      color: "var(--main-accent)",
+      color: "var(--main-text-light)",
       align: "left",
     },
     "Basic Editing": {
-      color: "var(--main-tertiary)",
+      color: "var(--main-text-light)",
       align: "right",
     },
     "Search and Replace": {
-      color: "var(--main-tertiary)",
+      color: "var(--main-text-light)",
       align: "right",
     },
   };
