@@ -99,49 +99,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 100%;
   word-break: break-word;
-  position: relative;
-  cursor: pointer;
-  transition: all 0.2s ease;
   color: var(--main-text-light);
-}
-
-.keybind:hover {
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.keybind.copied {
-  background: rgba(242, 118, 107, 0.4); /* Using main-accent with opacity */
-  border: 1px solid var(--main-accent);
-}
-
-.copy-indicator {
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--main-accent);
-  color: var(--main-text-light);
-  padding: 3px 8px;
-  border-radius: 4px;
-  font-size: 0.7rem;
-  opacity: 0;
-  animation: fadeInOut 1.5s ease;
-}
-
-@keyframes fadeInOut {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 
 @media (max-width: 600px) {

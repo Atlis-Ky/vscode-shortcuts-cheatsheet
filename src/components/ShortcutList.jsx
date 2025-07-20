@@ -15,31 +15,51 @@ const ShortcutList = ({ shortcuts }) => {
   // Get the groups in the order they appear in the original data
   const groups = Object.keys(groupedShortcuts);
 
-  // Map for group header colors
-  const groupHeaderColors = {
-    General: "var(--main-accent)",
-    "File Management": "var(--main-accent)",
-    "Integrated Terminal": "var(--main-accent)",
-    "Basic Editing": "var(--main-tertiary)",
-    "Search and Replace": "var(--main-tertiary)",
+  // Map for group header colors and alignment
+  const groupHeaderStyles = {
+    General: {
+      color: "var(--main-accent)",
+      align: "left",
+    },
+    "File Management": {
+      color: "var(--main-accent)",
+      align: "left",
+    },
+    "Integrated Terminal": {
+      color: "var(--main-accent)",
+      align: "left",
+    },
+    "Basic Editing": {
+      color: "var(--main-tertiary)",
+      align: "right",
+    },
+    "Search and Replace": {
+      color: "var(--main-tertiary)",
+      align: "right",
+    },
   };
 
   return (
     <div className="shortcut-list-container">
       {groups.map((group) => {
-        const headerColor = groupHeaderColors[group] || "var(--main-accent)";
+        const headerStyle = groupHeaderStyles[group] || {
+          color: "var(--main-accent)",
+          align: "left",
+        };
 
         return (
           <div key={group} className="shortcut-group">
-            <h2
-              className="group-heading"
-              style={{
-                color: headerColor,
-                "--underline-color": headerColor, // CSS variable for the underline
-              }}
-            >
-              {group}
-            </h2>
+            <div className={`heading-container ${headerStyle.align}`}>
+              <h2
+                className="group-heading"
+                style={{
+                  color: headerStyle.color,
+                  "--underline-color": headerStyle.color,
+                }}
+              >
+                {group}
+              </h2>
+            </div>
             <div className="shortcut-list">
               {groupedShortcuts[group].map((shortcut) => (
                 <ShortcutTemplates key={shortcut.id} shortcut={shortcut} />

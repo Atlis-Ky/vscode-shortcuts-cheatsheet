@@ -8,6 +8,19 @@
   margin-bottom: 3rem;
 }
 
+.heading-container {
+  width: 100%;
+  display: flex;
+}
+
+.heading-container.left {
+  justify-content: flex-start;
+}
+
+.heading-container.right {
+  justify-content: flex-end;
+}
+
 .group-heading {
   font-family: "Special Gothic Expanded One", Arial, sans-serif;
   font-size: 2rem;
@@ -59,6 +72,12 @@
 }
 
 @media (max-width: 600px) {
+  /* Center all headings on mobile for better appearance */
+  .heading-container.left,
+  .heading-container.right {
+    justify-content: center;
+  }
+
   .shortcut-list {
     grid-template-columns: 1fr; /* 1 column on small screens */
     gap: 0.7rem;
