@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "../styles/ShortcutTemplate.css";
 
 // Group-based color mapping
@@ -40,6 +40,8 @@ const defaultStyle = {
 const ShortcutTemplates = ({ shortcut }) => {
   const style = groupStyles[shortcut.group] || defaultStyle;
   const shortcutKeysRef = useRef(null);
+  const [copiedMac, setCopiedMac] = useState(false);
+  const [copiedWindows, setCopiedWindows] = useState(false);
 
   // Set the divider color to match the header after render
   useEffect(() => {
@@ -56,6 +58,25 @@ const ShortcutTemplates = ({ shortcut }) => {
       }
     }
   }, [style.headerBg]);
+
+  // Copy to clipboard function
+  const copyToClipboard = (text, platform) => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        // Set the copied state for the relevant platform
+        if (platform === "mac") {
+          setCopiedMac(true);
+          setTimeout(() => setCopiedMac(false), 1500); // Reset after 1.5s
+        } else {
+          setCopiedWindows(true);
+          setTimeout(() => setCopiedWindows(false), 1500); // Reset after 1.5s
+        }
+      })
+      .catch((err) => {
+        console.error("Failed to copy: ", err);
+      });
+  };
 
   return (
     <div
@@ -79,11 +100,25 @@ const ShortcutTemplates = ({ shortcut }) => {
         >
           <div className="os-section">
             <h4 className="os-heading">Mac</h4>
-            <div className="keybind">{shortcut.mac}</div>
+            <div
+              className={`keybind ${copiedMac ? "copied" : ""}`}
+              onClick={() => copyToClipboard(shortcut.mac, "mac")}
+              title="Click to copy to clipboard"
+            >
+              {shortcut.mac}
+              {copiedMac && <span className="copy-indicator">Copied!</span>}
+            </div>
           </div>
           <div className="os-section">
             <h4 className="os-heading">Windows</h4>
-            <div className="keybind">{shortcut.windows}</div>
+            <div
+              className={`keybind ${copiedWindows ? "copied" : ""}`}
+              onClick={() => copyToClipboard(shortcut.windows, "windows")}
+              title="Click to copy to clipboard"
+            >
+              {shortcut.windows}
+              {copiedWindows && <span className="copy-indicator">Copied!</span>}
+            </div>
           </div>
         </div>
       </div>
