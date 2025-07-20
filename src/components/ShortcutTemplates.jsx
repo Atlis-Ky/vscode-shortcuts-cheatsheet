@@ -1,29 +1,94 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "../styles/ShortcutTemplate.css";
 
-const groupColors = {
-  General: "var(--general-bg)",
-  "Basic Editing": "var(--edit-bg)",
-  Navigation: "var(--nav-bg)",
+// Group-based color mapping
+const groupStyles = {
+  General: {
+    headerBg: "var(--general-accent)",
+    cardBg: "var(--general-bg)",
+    accentColor: "var(--general-accent)",
+  },
+  "Basic Editing": {
+    headerBg: "var(--edit-accent)",
+    cardBg: "var(--edit-bg)",
+    accentColor: "var(--edit-accent)",
+  },
+  "File Management": {
+    headerBg: "var(--wine-secondary)",
+    cardBg: "var(--wine-primary)",
+    accentColor: "var(--wine-accent)",
+  },
+  "Search and Replace": {
+    headerBg: "var(--coral-secondary)",
+    cardBg: "var(--coral-primary)",
+    accentColor: "var(--coral-accent)",
+  },
+  "Integrated Terminal": {
+    headerBg: "var(--aqua-secondary)",
+    cardBg: "var(--aqua-primary)",
+    accentColor: "var(--aqua-accent)",
+  },
 };
 
-const ShortcutTemplates = ({ shortcut }) => (
-  <div
-    className="shortcut-template"
-    style={{ background: groupColors[shortcut.group] || "white" }}
-  >
-    <h3 className="shortcut-title">{shortcut.shortcut}</h3>
-    <div className="shortcut-keys">
-      <div>
-        <h4 className="mac-subheading">Mac</h4>
-        <div className="keybind">{shortcut.mac}</div>
+// Default styles for groups without specific mapping
+const defaultStyle = {
+  headerBg: "var(--nav-accent)",
+  cardBg: "var(--nav-bg)",
+  accentColor: "var(--nav-text)",
+};
+
+const ShortcutTemplates = ({ shortcut }) => {
+  const style = groupStyles[shortcut.group] || defaultStyle;
+  const shortcutKeysRef = useRef(null);
+
+  // Set the divider color to match the header after render
+  useEffect(() => {
+    if (shortcutKeysRef.current) {
+      const afterElement = window.getComputedStyle(
+        shortcutKeysRef.current,
+        "::after"
+      );
+      if (afterElement) {
+        shortcutKeysRef.current.style.setProperty(
+          "--divider-color",
+          style.headerBg
+        );
+      }
+    }
+  }, [style.headerBg]);
+
+  return (
+    <div
+      className="shortcut-template"
+      style={{
+        borderLeft: `4px solid ${style.headerBg}`,
+        borderRight: `4px solid ${style.headerBg}`,
+      }}
+    >
+      <div
+        className="shortcut-header"
+        style={{ backgroundColor: style.headerBg }}
+      >
+        <h3 className="shortcut-title">{shortcut.shortcut}</h3>
       </div>
-      <div>
-        <h4 className="windows-subheading">Windows</h4>
-        <div className="keybind">{shortcut.windows}</div>
+      <div className="shortcut-body" style={{ backgroundColor: style.cardBg }}>
+        <div
+          className="shortcut-keys"
+          ref={shortcutKeysRef}
+          style={{ "--divider-color": style.headerBg }}
+        >
+          <div className="os-section">
+            <h4 className="os-heading">Mac</h4>
+            <div className="keybind">{shortcut.mac}</div>
+          </div>
+          <div className="os-section">
+            <h4 className="os-heading">Windows</h4>
+            <div className="keybind">{shortcut.windows}</div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default ShortcutTemplates;

@@ -1,35 +1,130 @@
 .shortcut-template {
-  border-radius: var(--border-radius);
+  border-radius: 12px;
+  overflow: hidden;
   margin: 1rem 0;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+.shortcut-template:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.shortcut-header {
+  padding: 0.8rem 1rem;
+  color: #fff;
+}
+
 .shortcut-title {
-  margin-bottom: 0.5rem;
-  color: var(--text-main);
+  margin: 0;
   text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
+
+.shortcut-body {
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .shortcut-keys {
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 1rem;
+  flex-grow: 1;
+  position: relative;
 }
-.keybind {
-  background: #fff;
-  border-radius: 6px;
-  padding: 0.3rem 0.7rem;
-  margin-top: 0.2rem;
-  font-family: monospace;
-  font-size: 1rem;
-  border: 1px solid #eee;
+
+/* Add vertical divider between OS sections */
+.shortcut-keys:after {
+  content: "";
+  position: absolute;
+  top: -1rem; /* Extend upward to connect with the header */
+  bottom: 0;
+  left: 50%;
+  width: 3px;
+  background-color: var(--divider-color);
+  transform: translateX(-50%);
 }
-.windows-subheading {
+
+.os-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.os-section:first-child {
+  align-items: flex-start;
+  padding-right: 0.5rem;
+}
+
+.os-section:first-child .os-heading,
+.os-section:first-child .keybind {
+  text-align: left;
+}
+
+.os-section:last-child {
+  align-items: flex-end;
+  padding-left: 0.5rem;
+}
+
+.os-section:last-child .os-heading,
+.os-section:last-child .keybind {
   text-align: right;
+}
+
+.os-heading {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.keybind {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 8px; /* Rounded corners for keybind boxes */
+  padding: 0.5rem;
+  font-family: monospace;
+  font-size: 0.85rem;
+  font-weight: 400;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  word-break: break-word;
 }
 
 @media (max-width: 600px) {
   .shortcut-keys {
     flex-direction: column;
-    gap: 0.5rem;
+  }
+
+  /* Remove vertical divider on mobile */
+  .shortcut-keys:after {
+    display: none;
+  }
+
+  .os-section {
+    margin-bottom: 0.8rem;
+    padding: 0;
+  }
+
+  .os-section:last-child {
+    margin-bottom: 0;
+    align-items: flex-start;
+  }
+
+  .os-section:last-child .os-heading,
+  .os-section:last-child .keybind {
+    text-align: left;
+  }
+
+  .shortcut-title {
+    font-size: 0.9rem;
   }
 }

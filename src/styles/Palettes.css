@@ -28,4 +28,19 @@
     --contextcard-primary: #081b26;
     --contextcard-secondary: #586166;
     --contextcard-accent: #f2766b;
+
+
+    /* TEST PALLETTES */
+
+    --coral-primary: #F2858E;
+    --coral-secondary: #7A2246;
+    --coral-accent: #0D0D0D;
+
+    --wine-primary: #f56f4f;
+    --wine-secondary: #35604e;
+    --wine-accent: #001a12;
+
+    --aqua-primary: #67d5ae;
+    --aqua-secondary: #476f91;
+    --aqua-accent: #052947;
 }
