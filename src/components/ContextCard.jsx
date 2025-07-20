@@ -11,7 +11,7 @@ const ContextCard = () => (
       Studio Code that will help speed up your programming adventures. I've
       split them up into categories to organise them a bit. Feel free to click
       on any of the preset filters or use the search bar to find a specific
-      shortcut that you need.
+      shortcut that you need. Happy coding!
     </p>
   </div>
 );

@@ -1,0 +1,31 @@
+.footer {
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+  width: 100%;
+  color: var(--main-text-light);
+}
+
+.footer-separator {
+  height: 3px;
+  background-color: var(--main-accent);
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.footer-content {
+  text-align: center;
+  font-size: 1rem;
+  opacity: 0.7;
+  padding: 0 1rem;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
+
+  .footer-content {
+    font-size: 0.8rem;
+  }
+}
