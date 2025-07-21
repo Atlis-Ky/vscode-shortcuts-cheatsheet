@@ -8,13 +8,13 @@
 }
 
 .filter-button {
-  padding: 0.5rem 0.2rem;
+  padding: 0.8rem 0.2rem;
   border-radius: var(--border-radius);
   border: 2px solid;
   background-color: transparent;
   color: var(--main-text-light);
   font-family: "Special Gothic Expanded One", Arial, sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;

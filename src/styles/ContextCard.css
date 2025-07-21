@@ -24,9 +24,11 @@
 }
 
 .context-card-text {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
   font-weight: 500;
   color: var(--main-text-light);
+    font-family: "Special Gothic Expanded One", Arial, sans-serif;
   margin: 0 50px;
 }
 

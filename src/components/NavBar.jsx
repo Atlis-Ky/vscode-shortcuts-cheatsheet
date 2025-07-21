@@ -4,7 +4,7 @@ import "../styles/NavBar.css";
 
 const NavBar = ({ onSearch }) => (
   <nav className="navbar">
-    <div className="navbar-title">VSCODE Keyboard Shortcuts</div>
+    <div className="navbar-title"><span className="highlight-word">VSCODE</span> Keyboard Shortcuts</div>
     <SearchBar onSearch={onSearch} />
   </nav>
 );
