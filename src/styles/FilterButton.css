@@ -50,10 +50,6 @@
   .filter-buttons-container {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .filter-button {
-    padding: 0.4rem 0.5rem;
-  }
 }
 
 @media (max-width: 400px) {

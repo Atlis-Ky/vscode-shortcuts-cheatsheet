@@ -17,30 +17,12 @@ const ShortcutList = ({ shortcuts }) => {
 
   // Map for group header colors and alignment
   const groupHeaderStyles = {
-    General: {
-      color: "var(--main-text-light)",
-      align: "left",
-    },
-    "File Management": {
-      color: "var(--main-text-light)",
-      align: "left",
-    },
-    "Integrated Terminal": {
-      color: "var(--main-text-light)",
-      align: "left",
-    },
-    "Basic Editing": {
-      color: "var(--main-text-light)",
-      align: "right",
-    },
-    "Search and Replace": {
-      color: "var(--main-text-light)",
-      align: "right",
-    },
-    "Editor Management": {
-      color: "var(--main-text-light)",
-      align: "right", 
-    },
+    General: { align: "left" },
+    "File Management": { align: "left" },
+    "Integrated Terminal": { align: "left" },
+    "Basic Editing": { align: "right" },
+    "Search and Replace": { align: "right" },
+    "Editor Management": { align: "right" },
   };
 
   return (
@@ -53,12 +35,12 @@ const ShortcutList = ({ shortcuts }) => {
 
         return (
           <div key={group} className="shortcut-group">
-            <div className={`heading-container ${headerStyle.align}`}>
+            <div className={`heading-container ${headerStyle.align || "left"}`}>
               <h2
                 className="group-heading"
                 style={{
-                  color: headerStyle.color,
-                  "--underline-color": headerStyle.color,
+                  color: "var(--main-text-light)",
+                  "--underline-color": "var(--main-text-light)",
                 }}
               >
                 {group}

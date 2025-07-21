@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import "../styles/ShortcutTemplate.css";
 
 // Group-based color mapping
@@ -6,38 +6,32 @@ export const groupStyles = {
   General: {
     headerBg: "var(--alt-one)",
     cardBg: "var(--main-dark)",
-    accentColor: "var(--main-accent)",
-    titleColor: "var(--main-text-light)", 
+    titleColor: "var(--main-text-light)",
   },
   "Basic Editing": {
     headerBg: "var(--main-accent)",
     cardBg: "var(--main-dark)",
-    accentColor: "var(--main-accent)",
     titleColor: "var(--main-text-light)",
   },
   "File Management": {
     headerBg: "var(--alt-three)",
     cardBg: "var(--main-dark)",
-    accentColor: "var(--main-accent)",
-    titleColor: "var(--main-text-dark)", 
+    titleColor: "var(--main-text-dark)",
   },
   "Search and Replace": {
     headerBg: "var(--alt-four)",
     cardBg: "var(--main-dark)",
-    accentColor: "var(--main-accent)",
-    titleColor: "var(--main-text-dark)", 
+    titleColor: "var(--main-text-dark)",
   },
   "Integrated Terminal": {
     headerBg: "var(--alt-five)",
     cardBg: "var(--main-dark)",
-    accentColor: "var(--main-accent)",
-    titleColor: "var(--main-text-dark)", 
+    titleColor: "var(--main-text-dark)",
   },
   "Editor Management": {
-    headerBg: "var(--main-text-light)", 
+    headerBg: "var(--main-text-light)",
     cardBg: "var(--main-dark)",
-    accentColor: "var(--main-accent)",
-    titleColor: "var(--main-text-dark)", 
+    titleColor: "var(--main-text-dark)",
   },
 };
 
@@ -45,29 +39,11 @@ export const groupStyles = {
 const defaultStyle = {
   headerBg: "var(--main-accent)",
   cardBg: "var(--main-dark)",
-  accentColor: "var(--main-accent)",
   titleColor: "var(--main-text-light)",
 };
 
 const ShortcutTemplates = ({ shortcut }) => {
   const style = groupStyles[shortcut.group] || defaultStyle;
-  const shortcutKeysRef = useRef(null);
-
-  // Sets the divider color to match the header after render, could prob be simplified later on?
-  useEffect(() => {
-    if (shortcutKeysRef.current) {
-      const afterElement = window.getComputedStyle(
-        shortcutKeysRef.current,
-        "::after"
-      );
-      if (afterElement) {
-        shortcutKeysRef.current.style.setProperty(
-          "--divider-color",
-          style.headerBg
-        );
-      }
-    }
-  }, [style.headerBg]);
 
   return (
     <div
@@ -81,17 +57,13 @@ const ShortcutTemplates = ({ shortcut }) => {
         className="shortcut-header"
         style={{ backgroundColor: style.headerBg }}
       >
-        <h3
-          className="shortcut-title"
-          style={{ color: style.titleColor }} 
-        >
+        <h3 className="shortcut-title" style={{ color: style.titleColor }}>
           {shortcut.shortcut}
         </h3>
       </div>
       <div className="shortcut-body" style={{ backgroundColor: style.cardBg }}>
         <div
           className="shortcut-keys"
-          ref={shortcutKeysRef}
           style={{ "--divider-color": style.headerBg }}
         >
           <div className="os-section">
