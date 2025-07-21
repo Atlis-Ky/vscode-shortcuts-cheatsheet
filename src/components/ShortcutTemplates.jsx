@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import "../styles/ShortcutTemplate.css";
 
 // Group-based color mapping
-const groupStyles = {
+export const groupStyles = {
   General: {
     headerBg: "var(--alt-one)",
     cardBg: "var(--main-dark)",
@@ -83,7 +83,7 @@ const ShortcutTemplates = ({ shortcut }) => {
       >
         <h3
           className="shortcut-title"
-          style={{ color: style.titleColor }} // Apply the titleColor here
+          style={{ color: style.titleColor }} 
         >
           {shortcut.shortcut}
         </h3>

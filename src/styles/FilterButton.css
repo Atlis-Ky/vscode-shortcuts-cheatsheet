@@ -1,0 +1,63 @@
+.filter-buttons-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.8rem;
+  padding: 1rem 2rem;
+  margin: 0 auto 2rem;
+  max-width: 95vw;
+}
+
+.filter-button {
+  padding: 0.5rem 0.2rem;
+  border-radius: var(--border-radius);
+  border: 2px solid;
+  background-color: transparent;
+  color: var(--main-text-light);
+  font-family: "Special Gothic Expanded One", Arial, sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  text-align: center;
+}
+
+.filter-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.filter-button.active {
+  color: var(--main-text-dark);
+  font-weight: bold;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 900px) {
+  .filter-buttons-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .filter-button {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .filter-buttons-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filter-button {
+    padding: 0.4rem 0.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .filter-buttons-container {
+    grid-template-columns: 1fr;
+  }
+}
