@@ -8,41 +8,14 @@
 --main-dark: #081b26;
 --main-text-dark: #222;
 --main-text-light: #f7f7f7;
+
+/* PALETTE - ALTERNATES */
 --alt-one: #EF6351;
 --alt-two: #f2766b;
 --alt-three: #F7A399;
 --alt-four: #FBC3BC;
 --alt-five: #FFE3E0;
 
+--border-radius: 12px;
 
-
-
-/* OLD PAGE STYLING */
-
-    /* Navbar */
-    --nav-bg: #081b26;
-    --nav-text: #586166;
-    --nav-accent: #f2766b;
-    --text-main: #222;
-    --border-radius: 12px;
-
-    /* ContextCard */
-    --contextcard-primary: #081b26;
-    --contextcard-secondary: #586166;
-    --contextcard-accent: #f2766b;
-
-
-    /* TEST PALLETTES */
-
-    --coral-primary: #F2858E;
-    --coral-secondary: #7A2246;
-    --coral-accent: #0D0D0D;
-
-    --wine-primary: #f56f4f;
-    --wine-secondary: #35604e;
-    --wine-accent: #001a12;
-
-    --aqua-primary: #67d5ae;
-    --aqua-secondary: #476f91;
-    --aqua-accent: #052947;
 }

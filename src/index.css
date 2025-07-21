@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: "Inter", Arial, sans-serif;
-  background: var(--nav-bg); 
-  color: var(--text-main);
+  background: var(--main-dark); 
+  color: var(--main-text-light);
 }
 * {
   box-sizing: border-box;

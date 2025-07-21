@@ -6,7 +6,7 @@ const Footer = () => (
     <div className="footer-separator"></div>
     <div className="footer-content">
       Resource made by Atlis-ky. Got any issues or feedback? Let me know in the
-      github repo. Thanks for stoppin by!
+      github repo. Thanks for stopping by!
     </div>
   </footer>
 );
