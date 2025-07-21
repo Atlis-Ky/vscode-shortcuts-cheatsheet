@@ -1,41 +1,47 @@
 import React, { useRef, useEffect } from "react";
 import "../styles/ShortcutTemplate.css";
 
-// Group-based color mapping - all using main color palette
+// Group-based color mapping
 const groupStyles = {
   General: {
     headerBg: "var(--alt-one)",
     cardBg: "var(--main-dark)",
     accentColor: "var(--main-accent)",
-    titleColor: "var(--main-text-light)", // Default light text
+    titleColor: "var(--main-text-light)", 
   },
   "Basic Editing": {
     headerBg: "var(--main-accent)",
     cardBg: "var(--main-dark)",
     accentColor: "var(--main-accent)",
-    titleColor: "var(--main-text-light)", // Default light text
+    titleColor: "var(--main-text-light)",
   },
   "File Management": {
     headerBg: "var(--alt-three)",
     cardBg: "var(--main-dark)",
     accentColor: "var(--main-accent)",
-    titleColor: "var(--main-text-dark)", // Default dark text
+    titleColor: "var(--main-text-dark)", 
   },
   "Search and Replace": {
     headerBg: "var(--alt-four)",
     cardBg: "var(--main-dark)",
     accentColor: "var(--main-accent)",
-    titleColor: "var(--main-text-dark)", // Dark text for this group
+    titleColor: "var(--main-text-dark)", 
   },
   "Integrated Terminal": {
     headerBg: "var(--alt-five)",
     cardBg: "var(--main-dark)",
     accentColor: "var(--main-accent)",
-    titleColor: "var(--main-text-dark)", // Dark text for this group
+    titleColor: "var(--main-text-dark)", 
+  },
+  "Editor Management": {
+    headerBg: "var(--main-text-light)", 
+    cardBg: "var(--main-dark)",
+    accentColor: "var(--main-accent)",
+    titleColor: "var(--main-text-dark)", 
   },
 };
 
-// Default styles for groups without specific mapping
+// fallback for new groups without mapping
 const defaultStyle = {
   headerBg: "var(--main-accent)",
   cardBg: "var(--main-dark)",
@@ -47,7 +53,7 @@ const ShortcutTemplates = ({ shortcut }) => {
   const style = groupStyles[shortcut.group] || defaultStyle;
   const shortcutKeysRef = useRef(null);
 
-  // Sets the divider color to match the header after render
+  // Sets the divider color to match the header after render, could prob be simplified later on?
   useEffect(() => {
     if (shortcutKeysRef.current) {
       const afterElement = window.getComputedStyle(

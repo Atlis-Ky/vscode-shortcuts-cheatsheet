@@ -351,6 +351,78 @@ const shortcutData = [
     mac: "⌘ + Shift + R",
     windows: "Ctrl + Shift + R",
   },
+
+  // EDITOR MANAGEMENT
+  {
+    id: 50,
+    group: "Editor Management",
+    shortcut: "Split editor",
+    mac: "⌘ + \\",
+    windows: "Ctrl + \\",
+  },
+  {
+    id: 51,
+    group: "Editor Management",
+    shortcut: "Switch between editors",
+    mac: "⌘ + 1 / 2 / 3",
+    windows: "Ctrl + 1 / 2 / 3",
+  },
+  {
+    id: 52,
+    group: "Editor Management",
+    shortcut: "Open editor to the side",
+    mac: "⌘ + Enter",
+    windows: "Ctrl + Enter",
+  },
+  {
+    id: 53,
+    group: "Editor Management",
+    shortcut: "Close active editor",
+    mac: "⌘ + W",
+    windows: "Ctrl + W",
+  },
+  {
+    id: 54,
+    group: "Editor Management",
+    shortcut: "Close other editors",
+    mac: "⌘ + Option + T",
+    windows: "Ctrl + Alt + T",
+  },
+  {
+    id: 55,
+    group: "Editor Management",
+    shortcut: "Move editor into next group",
+    mac: "⌘ + Ctrl + →",
+    windows: "Ctrl + Alt + →",
+  },
+  {
+    id: 56,
+    group: "Editor Management",
+    shortcut: "Move editor into previous group",
+    mac: "⌘ + Ctrl + ←",
+    windows: "Ctrl + Alt + ←",
+  },
+  {
+    id: 57,
+    group: "Editor Management",
+    shortcut: "Move active editor group",
+    mac: "⌘ + K ←/→",
+    windows: "Ctrl + K ←/→",
+  },
+  {
+    id: 58,
+    group: "Editor Management",
+    shortcut: "Focus on editor group",
+    mac: "⌘ + 1 / 2 / 3 / 4",
+    windows: "Ctrl + 1 / 2 / 3 / 4",
+  },
+  {
+    id: 59,
+    group: "Editor Management",
+    shortcut: "Toggle editor group sizes",
+    mac: "⌘ + K ⌘ + =",
+    windows: "Ctrl + K Ctrl + =",
+  },
 ];
 
 export default shortcutData;

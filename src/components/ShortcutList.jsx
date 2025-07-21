@@ -37,6 +37,10 @@ const ShortcutList = ({ shortcuts }) => {
       color: "var(--main-text-light)",
       align: "right",
     },
+    "Editor Management": {
+      color: "var(--main-text-light)",
+      align: "right", 
+    },
   };
 
   return (
