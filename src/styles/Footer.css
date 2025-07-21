@@ -19,6 +19,16 @@
   padding: 0 1rem;
 }
 
+.footer-content a {
+  color: inherit; 
+  text-decoration: underline; 
+  text-underline-offset: 2px; 
+}
+
+.footer-content a:hover {
+  opacity: 0.8; 
+}
+
 @media (max-width: 600px) {
   .footer {
     padding: 1rem 0;
