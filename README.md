@@ -1,12 +1,5 @@
-# React + Vite
+DEVELOPER RESOURCE - VSCODE SHORTCUT CHEATSHEET
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Simple but useful page to help you find / memorise keyboard shortcuts in Visual Studio Code. A great way to make your coding go a little smoother and a little quicker! Useful tool for developers across all stacks and frameworks :D
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+(Part of a collection of developer resources I'm working on right now to help out fellow dev's in their first few years of programming. next up, colour palettes!!)
