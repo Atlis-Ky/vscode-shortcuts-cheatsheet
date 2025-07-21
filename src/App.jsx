@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import NavBar from "./components/Navbar";
+import NavBar from "./components/NavBar";
 import ShortcutList from "./components/ShortcutList";
 import shortcutData from "./components/ShortcutData";
 import "./styles/Palettes.css";
